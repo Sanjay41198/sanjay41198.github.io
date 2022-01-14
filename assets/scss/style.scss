@@ -1,0 +1,212 @@
+@import './abstracts/common';
+@import './abstracts/variables';
+@import './includes/footer';
+@import './includes/header';
+@import './mixins/breakpoints';
+
+// Main Page
+.background-main {
+    margin: -0.1rem 0 0 0;
+    padding: 0;
+    background: linear-gradient(90deg, #feac5e, #c779d0, #4bc0c8);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    height: fit-content;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  img.icon {
+    width: 200px;
+    height: 30vh;
+    margin-top: 12rem !important;
+    border-radius: 100%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-width: 10px;
+    box-shadow: -50px -20px 40px rgba(227, 135, 255, 0.25),
+      0px 50px 40px rgba(255, 219, 57, 0.3),
+      50px -20px 40px rgba(118, 255, 255, 0.3),
+      0 0 2pt 4pt rgba(255, 255, 255, 0.6);
+      @include media-min-md {
+          height: 18vh;
+      }
+      @include media-min-lg {
+          height: 15vh;
+      }
+      @include media-min-lg-x{
+          height: 28vh;
+          width: 70%;
+      }
+  }
+
+
+  .main-head {
+      margin-top: 3rem;
+      @include media-min-md {
+          margin-top: 12rem;
+      }
+  }
+  
+  .abt-main {
+    border-width: 10px;
+    box-shadow: 0px 0px 0px rgba(227, 135, 255, 0.25),
+      0px 0px 40px rgba(255, 219, 57, 0.3),
+      0px 0px 40px rgba(118, 255, 255, 0.3),
+      0 0 1px 1px rgba(255, 255, 255, 0.6);
+
+  }
+
+//   Section 2 
+.banner-2 {
+    .container {
+        .aboutme-heading {
+            margin: 0 6rem;
+            font-size: 3rem;
+            padding: 1rem;
+            border-bottom: 0.1rem solid #fff4;
+            color: #fff;
+        }
+        .det {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.banner-3 {
+    .container {
+        .edu-heading {
+            margin: 0 6rem;
+            font-size: 3rem;
+            padding: 1rem;
+            border-bottom: 0.1rem solid #fff4;
+            color: #fff;
+        }
+        .card {
+            z-index: 1;
+            padding: 30px;
+            -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            border-top-right-radius: 50px;
+           -webkit-transition: all .3s;
+            transition: all .3s;
+            background: transparent;
+            
+        }
+        .card:hover {
+            box-shadow: 0px 0px 0px rgba(227, 135, 255, 0.25),
+                        0px 0px 40px rgba(255, 219, 57, 0.3),
+                        0px 0px 40px rgba(118, 255, 255, 0.3),
+                        0 0 1px 1px rgba(255, 255, 255, 0.6);
+        }  
+    }
+}
+.banner-4 {
+    .container {
+        .port-head {
+            margin: 0 6rem;
+            font-size: 3rem;
+            padding: 1rem;
+            border-bottom: 0.1rem solid #fff4;
+            color: #fff;
+        }
+        .portimg {
+            object-fit: cover;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+        .hov-effect {
+            object-fit: cover;
+            &:hover {
+                transform: perspective(800px) rotateY(-8deg) translateY(-20px) rotateX(10deg)
+                scale(1);
+                filter: blur(0);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.banner-5 {
+    .container {
+        .cont-head {
+            margin: 0 6rem;
+            font-size: 3rem;
+            padding: 1rem;
+            border-bottom: 0.1rem solid #fff4;
+            color: #fff;
+        }
+        .contactme {
+            font-size: 20px;
+            border-radius: 45px;
+            box-shadow: 0px 20px 20px rgba(23, 9 ,44, 0.37);
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            background-color: transparent;
+            &:hover {
+                background-color: #a068d8;
+                box-shadow: 0px 15px 20px rgba(131, 88, 175, 0.3);
+                transform: translateY(-7px);
+            }
+        }
+        input {
+            border-radius: 10px;
+            border: none;
+            padding: 10px 20px;
+            box-shadow: 0px 20px 20px rgba(23, 9 ,44, 0.37);
+            &:hover {
+                box-shadow: 0px 0px 0px rgba(227, 135, 255, 0.25),
+                            0px 0px 40px rgba(255, 219, 57, 0.3),
+                            0px 0px 40px rgba(118, 255, 255, 0.3),
+                            0 0 1px 1px rgba(255, 255, 255, 0.6); 
+        }
+        
+        }
+        textarea {
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0px 20px 20px rgba(23, 9 ,44, 0.37);
+            &:hover {
+                        box-shadow: 0px 0px 0px rgba(227, 135, 255, 0.25),
+                        0px 0px 40px rgba(255, 219, 57, 0.3),
+                        0px 0px 40px rgba(118, 255, 255, 0.3),
+                        0 0 1px 1px rgba(255, 255, 255, 0.6);
+        }
+      }
+   }
+}
+
+.cardblrdis{
+    margin-top: 7rem;
+    margin-bottom: 3rem;
+}
+.cardcontact {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+ .icon1 {
+    width: 200px;
+    margin-top: 2rem !important;
+    border-radius: 100%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-width: 10px;
+    box-shadow: -50px -20px 40px rgba(227, 135, 255, 0.25),
+      0px 50px 40px rgba(255, 219, 57, 0.3),
+      50px -20px 40px rgba(118, 255, 255, 0.3),
+      0 0 2pt 4pt rgba(255, 255, 255, 0.6);
+}
